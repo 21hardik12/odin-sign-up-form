@@ -7,12 +7,13 @@
 }
 
 @font-face {
-    font-family: 'odin-font';
+    font-family: "odin-font";
     src: url(./assets/Norse-Bold.otf);
 }
 
 body {
-    display: flex;
+    display: grid;
+    grid-template-columns: min(35vw) 1fr;
     height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
     background-color: #f9fafb;
@@ -34,7 +35,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     top: 20%;
     display: flex;
     justify-content: center;
@@ -52,7 +53,7 @@ body {
 }
 
 .odin {
-    font-family: 'odin-font';
+    font-family: "odin-font";
     color: white;
     font-size: 70px;
 }
@@ -66,7 +67,7 @@ body {
     color: white;
     font-size: 10px;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 /* background image end */
@@ -78,7 +79,7 @@ body {
 }
 
 header,
-main, 
+main,
 footer {
     padding-left: 30px;
     padding-right: 100px;
@@ -86,7 +87,7 @@ footer {
 
 /* header */
 header {
-    min-height: 200px;
+    min-height: 180px;
     padding-top: 50px;
     font-weight: bold;
     font-size: large;
@@ -117,9 +118,16 @@ form {
     gap: 20px;
 }
 
-input, 
+input,
 label {
     display: block;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    /* width: 100%; */
+    padding: 5px;
+    /* height: 30px; */
 }
 
 span {
@@ -131,16 +139,35 @@ label {
     font-size: 10px;
 }
 
-input { 
+input {
     min-width: 300px;
-    padding: 4px;
-    height: 2em;
-    border: 1px solid #E5E7EB;
+    height: 1.5em;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
 }
 
-input:focus {
-    border: 1px solid blue;
-    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.25);
+input + span {
+    position: relative;
+}
+
+input + span::before {
+    position: absolute;
+    right: -20px;
+    top: -25px;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:invalid + span::before {
+    content: "✖";
+    color: red;
+}
+
+input:valid + span::before {
+    content: "✓";
+    color: green;
 }
 
 /* main end */
@@ -151,6 +178,7 @@ footer {
 }
 
 #sign-up-button {
+    color: white;
     appearance: none;
     background-color: #596d48;
     font-weight: bold;
@@ -178,6 +206,5 @@ footer > p {
 }
 
 /* footer end */
-
 
 /* main content end */
