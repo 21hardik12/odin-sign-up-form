@@ -1,0 +1,140 @@
+/* global styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* display: block; */
+}
+
+@font-face {
+    font-family: 'odin-font';
+    src: url(./assets/Norse-Bold.otf) format('otf');
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: 'odin-fon', Helvetica, Arial, sans-serif;
+    background-color: #f9fafb;
+}
+/* global styles end */
+
+/* background image */
+.bg-image {
+    background-image: url(./assets/halie-west-25xggax4bSA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 35vw;
+}
+/* background image end */
+
+/* main content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+main, 
+footer {
+    padding-left: 30px;
+    padding-right: 100px;
+}
+
+/* header */
+header {
+    min-height: 200px;
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: large;
+}
+
+header > p:last-child {
+    margin-top: 20px;
+}
+/* header end */
+
+/* main */
+main {
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+main > .heading {
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #080a05;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, 
+label {
+    display: block;
+}
+
+span {
+    display: flex;
+    gap: 30px;
+}
+
+label {
+    font-size: 10px;
+}
+
+input { 
+    min-width: 300px;
+    padding: 4px;
+    height: 2em;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.25);
+}
+
+/* main end */
+
+/* footer */
+footer {
+    min-height: 200px;
+}
+
+#sign-up-button {
+    appearance: none;
+    background-color: #596d48;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    margin: 30px 0;
+}
+
+footer > p {
+    font-size: medium;
+}
+
+#login-button {
+    color: #596d48;
+    appearance: none;
+    border: none;
+    padding: none;
+    margin: none;
+    font-weight: bold;
+    font-size: medium;
+    background: transparent;
+}
+
+/* footer end */
+
+
+/* main content end */
