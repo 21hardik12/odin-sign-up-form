@@ -8,13 +8,13 @@
 
 @font-face {
     font-family: 'odin-font';
-    src: url(./assets/Norse-Bold.otf) format('otf');
+    src: url(./assets/Norse-Bold.otf);
 }
 
 body {
     display: flex;
     height: 100vh;
-    font-family: 'odin-fon', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     background-color: #f9fafb;
 }
 /* global styles end */
@@ -25,7 +25,50 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-width: 35vw;
+    position: relative;
 }
+
+.logo {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.6);
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
+    flex: none;
+    height: 100%;
+    width: 100px;
+    background-image: url(./assets/odin-lined.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.odin {
+    font-family: 'odin-font';
+    color: white;
+    font-size: 70px;
+}
+
+.bg-credit {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    opacity: 60%;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;  
+}
+
 /* background image end */
 
 /* main content */
