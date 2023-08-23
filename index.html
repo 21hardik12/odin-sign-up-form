@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Sign-Up Form</title>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
     <div class="bg-image">
@@ -31,41 +32,41 @@
       </header>
       <main>
         <p class="heading">Let's do this!</p>
-        <form action="" method="post" id="form">
+        <form action="" method="post" id="form" novalidate>
           <span>
             <div>
               <label for="first-name">FIRST NAME</label>
               <input id="first-name" name="user-first-name" type="text" />
-              <span></span>
+              <span class="errorMessage"></span>
             </div>
             <div>
               <label for="last-name">LAST NAME</label>
               <input id="last-name" name="user-last-name" type="text" />
-              <span></span>
+              <span class="errorMessage"></span>
             </div>
           </span>
           <span>
             <div>
               <label for="email">EMAIL</label>
               <input type="email" id="email" name="user-email" />
-              <span></span>
+              <span class="errorMessage"></span>
             </div>
             <div>
               <label for="tele">PHONE NUMBER</label>
-              <input type="number" id="tele" name="user-phone-number" />
-              <span></span>
+              <input type="number" id="tele" name="user-phone-number" maxlength="10"/>
+              <span class="errorMessage"></span>
             </div>
           </span>
           <span>
             <div>
               <label for="password">PASSWORD</label>
               <input type="password" id="password" name="password" />
-              <span></span>
+              <span class="errorMessage"></span>
             </div>
             <div>
               <label for="confirm-password">CONFIRM PASSWORD</label>
               <input type="password" id="confirm-password" />
-              <span></span>
+              <span class="errorMessage"></span>
             </div>
           </span>
         </form>

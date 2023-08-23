@@ -146,7 +146,31 @@ input {
     border-radius: 5px;
 }
 
-input + span {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Optional: adjust spacing if needed */
+}
+
+input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+span > div {
+    position: relative;
+}
+
+.error {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0;
+    background-color: red;
+    color: white;
+    width: auto;
+    font-size: 10px;
+}
+/* input + span {
     position: relative;
 }
 
@@ -169,6 +193,16 @@ input:valid + span::before {
     content: "✓";
     color: green;
 }
+
+span.error::after {
+    position: absolute;
+    top: -2.2rem;
+    right: 0;
+    background-color: red;
+    color: white;
+    width: auto;
+    font-size: 10px;
+} */
 
 /* main end */
 
